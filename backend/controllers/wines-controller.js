@@ -1,4 +1,4 @@
-const { request } = require("express");
+// const { request } = require("express");
 const Wine = require("../model/wine");
 
 
@@ -31,7 +31,7 @@ const getById = async(req,res,next) => {
 };
 
 const addWine = async (req,res,next) => {
-    const {name, brand, vintage, varietal, appellation, harvestdate, aging, bottlingdate, alcohol} = req.body;
+    const {name, brand, vintage, varietal, appellation, harvestdate, aging, bottlingdate, alcohol, image} = req.body;
     let wine;
     try {
         wine = new Wine({
@@ -43,7 +43,8 @@ const addWine = async (req,res,next) => {
             harvestdate,
             aging,
             bottlingdate,
-            alcohol
+            alcohol,
+            image
         });
         await wine.save();
     }catch (err){
@@ -58,7 +59,7 @@ const addWine = async (req,res,next) => {
 
 const updateWine = async (req, res, next) => {
     const id = req.params.id;
-    const {name, brand, vintage, varietal, appellation, harvestdate, aging, bottlingdate, alcohol} = req.body;
+    const {name, brand, vintage, varietal, appellation, harvestdate, aging, bottlingdate, alcohol, image} = req.body;
     let wine;
     try {
         book = await Wine.findByIdAndUpdate(id, {
@@ -70,16 +71,19 @@ const updateWine = async (req, res, next) => {
             harvestdate,
             aging,
             bottlingdate,
-            alcohol
+            alcohol,
+            image
         });
-        wine = await wine.save ();
-    }catch (err) {
+        wine = await wine.save();
+    } catch (err) {
         console.log(err);
     }
-    if(!wine) {
+    if (!wine) {
         return res.status(404).json({message:'Unable To Update By this ID'});
     }
+    
     return res.status(200).json({ wine });
+    
 };
 
 const deleteWine = async (req, res, next) => {
