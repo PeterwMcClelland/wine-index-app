@@ -6,7 +6,7 @@ const app = express();
 
 // middlewares
 app.use(express.json());
-app.use("/wines",router)// localhost:3000/wines
+app.use("/wines", router);// localhost:3000/wines
 
 mongoose.connect(
     "mongodb+srv://admin:torCtrvegObXULYi@cluster0.dwnwkew.mongodb.net/wine-index?retryWrites=true&w=majority"

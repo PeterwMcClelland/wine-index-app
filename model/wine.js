@@ -38,7 +38,7 @@ const wineSchema = new Schema({
     alcohol: {
         type: String,
         require: true
-    }
+    },
 });
 
 module.exports = mongoose.model("wine", wineSchema);
