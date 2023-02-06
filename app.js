@@ -5,7 +5,7 @@ const router = require("./routes/wine-routes");
 const app = express();
 
 // middlewares
-
+app.use(express.json());
 app.use("/wines",router)// localhost:3000/wines
 
 mongoose.connect(
