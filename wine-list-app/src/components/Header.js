@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { AppBar, Tab, Tabs, Toolbar, Typography } from '@mui/material';
 import WineBarIcon from '@mui/icons-material/WineBar';
-
+import { NavLink } from 'react-router-dom';
 
 export const Header = () => {
     const [value, setValue] = useState();
   return (
     <div>
-        <AppBar position="sticky">
+        <AppBar sx={{backgroundColor:'#232F3D'}} position="sticky">
             
         <Toolbar>
             <Typography>
@@ -20,9 +20,9 @@ export const Header = () => {
             value={value} 
             onChange={( e, val) => setValue(val)}
             >
-                <Tab label='Add Wine'/>
-                    <Tab label='All Wines'/>
-                    <Tab label='About Us'/>
+                <Tab LinkComponent={NavLink} to="/add" label='Add Wine'/>
+                    <Tab LinkComponent={NavLink} to="/wines" label='All Wines'/>
+                    <Tab LinkComponent={NavLink} to="/about" label='About Us'/>
             </Tabs>
         </Toolbar>
         </AppBar>

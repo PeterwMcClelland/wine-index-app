@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const router = require("./routes/wine-routes");
 
@@ -6,6 +7,7 @@ const app = express();
 
 // middlewares
 app.use(express.json());
+app.use(cors());
 app.use("/wines", router);// localhost:3000/wines
 
 mongoose.connect(
