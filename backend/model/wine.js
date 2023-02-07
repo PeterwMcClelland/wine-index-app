@@ -39,9 +39,9 @@ const wineSchema = new Schema({
         type: String,
         require: true
     },
-    image: {
+    price: {
         type: String,
-        required: true
+        require:true
     }
 });
 

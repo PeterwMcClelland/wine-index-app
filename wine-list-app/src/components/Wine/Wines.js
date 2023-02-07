@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-const URL = "http://localhost:3000/books"; 
+import Wine from "./Wine"
+const URL = "http://localhost:3000/wines"; 
  
 
 const fetchHandler = async() => {
@@ -11,7 +12,7 @@ const fetchHandler = async() => {
      const [wines, setWines] = useState();
   useEffect(() => {
 
-    fetchHandler().then(data=>setWines(data.wines));
+    fetchHandler().then(data => setWines(data.wines));
   }, []);
   console.log(wines);
   
@@ -19,7 +20,7 @@ const fetchHandler = async() => {
       <ul>
           {wines && wines.map((wine, i) =>(
           <div key={i}>
-            <Books />
+            <Wine wine={wine} />
               </div>
           ))} 
       </ul>

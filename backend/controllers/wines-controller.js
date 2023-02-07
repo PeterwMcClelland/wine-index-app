@@ -31,7 +31,7 @@ const getById = async(req,res,next) => {
 };
 
 const addWine = async (req,res,next) => {
-    const {name, brand, vintage, varietal, appellation, harvestdate, aging, bottlingdate, alcohol, image} = req.body;
+    const {name, brand, vintage, varietal, appellation, harvestdate, aging, bottlingdate, alcohol, price} = req.body;
     let wine;
     try {
         wine = new Wine({
@@ -44,7 +44,7 @@ const addWine = async (req,res,next) => {
             aging,
             bottlingdate,
             alcohol,
-            image
+            price
         });
         await wine.save();
     }catch (err){
@@ -59,10 +59,10 @@ const addWine = async (req,res,next) => {
 
 const updateWine = async (req, res, next) => {
     const id = req.params.id;
-    const {name, brand, vintage, varietal, appellation, harvestdate, aging, bottlingdate, alcohol, image} = req.body;
+    const {name, brand, vintage, varietal, appellation, harvestdate, aging, bottlingdate, alcohol, price} = req.body;
     let wine;
     try {
-        book = await Wine.findByIdAndUpdate(id, {
+        wine = await Wine.findByIdAndUpdate(id, {
             name,
             brand,
             vintage,
@@ -72,7 +72,7 @@ const updateWine = async (req, res, next) => {
             aging,
             bottlingdate,
             alcohol,
-            image
+            price
         });
         wine = await wine.save();
     } catch (err) {
