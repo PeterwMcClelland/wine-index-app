@@ -1,0 +1,23 @@
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+li {
+    padding: 10px;
+    width: 250px;
+    max-width: 250px;
+    max-height: 650px;
+    list-style-type: none;
+}
+
+.card {
+    margin: auto;
+    padding: 1rem;
+    width: 250px;
+    height: 100;
+    box-shadow: 5px 5px 10px #ccc;
+    align-items: center;
+    
+}

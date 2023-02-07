@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import Wine from "./Wine"
+import Wine from "./Wine";
+import "./Wine.css"
 const URL = "http://localhost:3000/wines"; 
  
 
@@ -19,9 +20,9 @@ const fetchHandler = async() => {
   return <div>
       <ul>
           {wines && wines.map((wine, i) =>(
-          <div key={i}>
+          <li key={i}>
             <Wine wine={wine} />
-              </div>
+              </li>
           ))} 
       </ul>
   </div>;
