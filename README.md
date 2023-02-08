@@ -15,6 +15,10 @@ This is a basic program to store wine information using REST API with CRUD opera
 - JavaScript
 - HTML & CSS
 
+## ScreenShot
+
+[![Screen-Shot-2023-02-08-at-2-38-42-PM.png](https://i.postimg.cc/SKHZvHtC/Screen-Shot-2023-02-08-at-2-38-42-PM.png)](https://postimg.cc/bGHHGVPw)
+
 
 ## How to run 
 
