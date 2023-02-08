@@ -1,11 +1,18 @@
 import { Button } from '@mui/material';
 import React from 'react';
 import "./Wine.css";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const Wine = (props) => {
+    const history = useNavigate()
     const { _id, name, brand, vintage, varietal, appellation, harvestdate, aging, bottlingdate, alcohol, price} = props.wine;
-    
+    const deleteHandler = async() => {
+       await axios.delete(`http://localhost:3000/wines/${_id}`)
+        .then(res=>res.data)
+        .then(()=> history("/"))
+        .then(()=> history("/wines"))
+    }
   return <div className='card'>
       
       <h1>{brand}</h1>
