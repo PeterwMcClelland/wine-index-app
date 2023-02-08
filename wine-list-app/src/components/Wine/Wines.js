@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import Wine from "./Wine";
-import "./Wine.css"
+import "./Wine.css";
 const URL = "http://localhost:3000/wines"; 
  
 

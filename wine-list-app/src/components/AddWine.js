@@ -17,7 +17,8 @@ import { useNavigate } from 'react-router-dom';
          aging: '',
          bottlingdate: '',
          alcohol: '',
-         price: ''
+         price: '',
+         image: ''
      });
      
      const handleChange = (e) => {
@@ -39,7 +40,8 @@ import { useNavigate } from 'react-router-dom';
              aging:String(inputs.aging),
              bottlingdate:String(inputs.bottlingdate),
              alcohol:String(inputs.alcohol),
-             price:Number(inputs.price)
+             price:Number(inputs.price),
+             image: String(inputs.image)
          }).then(res => res.data);
      }
 
@@ -81,6 +83,15 @@ import { useNavigate } from 'react-router-dom';
       <TextField value={inputs.alcohol} onChange={handleChange} margin='normal' fullWidth variant='outlined' name="alcohol" />
       <FormLabel>Price</FormLabel>
       <TextField value={inputs.price} onChange={handleChange} type={'number'} margin='normal' fullWidth variant='outlined' name="price" />
+      <FormLabel>Image</FormLabel>
+      <TextField
+          value={inputs.image}
+          onChange={handleChange}
+          margin="normal"
+          fullWidth
+          variant="outlined"
+          name="image"
+        />
       <Button variant='contained' type='submit' >
           Add Wine
       </Button>

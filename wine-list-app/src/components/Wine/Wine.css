@@ -1,11 +1,11 @@
 ul {
     display: flex;
     flex-direction: column;
-    align-items: center;
+
 }
 
 li {
-    padding: 10px;
+    padding: 5px;
     width: 250px;
     max-width: 250px;
     max-height: 650px;
@@ -13,11 +13,26 @@ li {
 }
 
 .card {
-    margin: auto;
+    
     padding: 1rem;
-    width: 250px;
+    width:600px;
+    display: table;
+    background-color:floralwhite;
     height: 100;
     box-shadow: 5px 5px 10px #ccc;
     align-items: center;
+    content: "";
+   
+
+}
+
+.card img {
+    width: 25%;
     
+  }
+
+.column {
+    float: left;
+    width: 50%;
+
 }
