@@ -32,7 +32,7 @@ const Wine = (props) => {
           <li>Harvest Date: {harvestdate}</li>
           <li>Aging: {aging}</li>
           <li>Bottling Date: {bottlingdate}</li>
-          <li>Alcohol: {alcohol}%</li>
+          <li>Alcohol: {alcohol}</li>
       </ul>
       <h3>Price: ${price}</h3>
       </div>

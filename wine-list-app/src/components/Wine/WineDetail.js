@@ -36,11 +36,13 @@ const WineDetail = () => {
              image: String(inputs.image)
         }).then(res=>res.data)
     }
+
     const handleSubmit = (e) => {
         e.preventDefault();
         sendRequest().then(()=>history("/wines"));
 
     }
+    
     const handleChange = (e) => {
         setInputs((prevState) => ({
             ...prevState,
@@ -63,26 +65,87 @@ const WineDetail = () => {
       marginTop={10}
       marginBottom={10}
        >
+
       <FormLabel>Name</FormLabel>
-      <TextField value={inputs.name} onChange={handleChange} margin='normal' fullWidth variant='outlined' name="name" />
+      <TextField 
+      value={inputs.name} 
+      onChange={handleChange} 
+      margin='normal' 
+      fullWidth variant='outlined' 
+      name="name" />
+
       <FormLabel>Brand</FormLabel>
-      <TextField value={inputs.brand} onChange={handleChange} margin='normal' fullWidth variant='outlined' name="brand" />
+      <TextField 
+      value={inputs.brand} 
+      onChange={handleChange} 
+      margin='normal' 
+      fullWidth variant='outlined' 
+      name="brand" />
+
       <FormLabel>Vintage</FormLabel>
-      <TextField value={inputs.vintage} onChange={handleChange} margin='normal' fullWidth variant='outlined' name="vintage" />
+      <TextField 
+      value={inputs.vintage} 
+      onChange={handleChange} 
+      margin='normal' 
+      fullWidth variant='outlined' 
+      name="vintage" />
+
       <FormLabel>Varietal</FormLabel>
-      <TextField value={inputs.varietal} onChange={handleChange} margin='normal' fullWidth variant='outlined' name="varietal" />
+      <TextField 
+      value={inputs.varietal} 
+      onChange={handleChange} 
+      margin='normal' 
+      fullWidth variant='outlined' 
+      name="varietal" />
+
       <FormLabel>Appellation</FormLabel>
-      <TextField value={inputs.appellation} onChange={handleChange} margin='normal' fullWidth variant='outlined' name="appellation" />
+      <TextField 
+      value={inputs.appellation} 
+      onChange={handleChange} 
+      margin='normal' 
+      fullWidth variant='outlined' 
+      name="appellation" />
+
       <FormLabel>Harvest Date</FormLabel>
-      <TextField value={inputs.harvestdate} onChange={handleChange} margin='normal' fullWidth variant='outlined' name="harvestdate" />
+      <TextField 
+      value={inputs.harvestdate} 
+      onChange={handleChange} 
+      margin='normal' 
+      fullWidth variant='outlined' 
+      name="harvestdate" />
+
       <FormLabel>Aging</FormLabel>
-      <TextField value={inputs.aging} onChange={handleChange} margin='normal' fullWidth variant='outlined' name="aging" />
+      <TextField 
+      value={inputs.aging} 
+      onChange={handleChange} 
+      margin='normal' 
+      fullWidth variant='outlined' 
+      name="aging" />
+
       <FormLabel>Bottling Date</FormLabel>
-      <TextField value={inputs.bottlingdate} onChange={handleChange} margin='normal' fullWidth variant='outlined' name="bottlingdate" />
+      <TextField 
+      value={inputs.bottlingdate} 
+      onChange={handleChange} 
+      margin='normal' 
+      fullWidth variant='outlined' 
+      name="bottlingdate" />
       <FormLabel>Alcohol</FormLabel>
-      <TextField value={inputs.alcohol} onChange={handleChange} margin='normal' fullWidth variant='outlined' name="alcohol" />
+      <TextField 
+      value={inputs.alcohol} 
+      onChange={handleChange} 
+      margin='normal' 
+      fullWidth variant='outlined' 
+      name="alcohol" />
+
       <FormLabel>Price</FormLabel>
-      <TextField value={inputs.price} onChange={handleChange} type={'number'} margin='normal' fullWidth variant='outlined' name="price" />
+      <TextField 
+      value={inputs.price} 
+      onChange={handleChange} 
+      type={'number'} 
+      margin='normal' 
+      fullWidth variant='outlined' 
+      name="price" />
+
       <FormLabel>Image</FormLabel>
             <TextField
               value={inputs.image}
@@ -92,6 +155,7 @@ const WineDetail = () => {
               variant="outlined"
               name="image"
             />
+
       <Button variant='contained' type='submit' >
           Update Wine
       </Button>
