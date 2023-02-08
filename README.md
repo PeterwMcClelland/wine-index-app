@@ -22,7 +22,7 @@ This is a basic program to store wine information using REST API with CRUD opera
 
 ## How to run 
 
-1. Download this software to your machine, e.g. `git clone @username/wine-index-app`
+1. Download this software to your machine, e.g. `git clone PeterwMcClelland/wine-index-app`
 2. Navigate into the directory, e.g. `cd wine-index-app`
 3. Install the dependencies, e.g. `npm i`
 4. Run the backend file, e.g. `npm start`
