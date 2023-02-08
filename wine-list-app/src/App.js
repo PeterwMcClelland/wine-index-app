@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import AddWine from "./components/AddWine";
 import Wines from "./components/Wine/Wines";
 import About from "./components/About";
+import WineDetail from "./components/Wine/WineDetail";
 
 function App() {
   return <React.Fragment>
@@ -17,6 +18,7 @@ function App() {
         <Route path="/add" element={<AddWine />} exact />
         <Route path="/wines" element={<Wines />} exact />
         <Route path="/about" element={<About />} exact />
+        <Route path="/wines/:id" element={<WineDetail/>} exact />
       </Routes>
     </main>
 
