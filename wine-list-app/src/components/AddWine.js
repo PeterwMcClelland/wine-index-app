@@ -50,8 +50,9 @@ import { useNavigate } from 'react-router-dom';
          console.log(inputs);
          sendRequest().then(() => history('/wines'))
      };
-  return <form onSubmit={handleSubmit}>
-      
+     
+  return <form className='addwine' onSubmit={handleSubmit}>
+
       <Box 
       display="flex" 
       flexDirection="column" 

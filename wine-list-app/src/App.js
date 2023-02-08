@@ -9,7 +9,7 @@ import WineDetail from "./components/Wine/WineDetail";
 
 function App() {
   return <React.Fragment>
-    <header>
+    <header className="header">
       <Header />
     </header>
     <main>

@@ -17,7 +17,7 @@ const fetchHandler = async() => {
   }, []);
   console.log(wines);
   
-  return <div>
+  return <div className='background'>
       <ul>
           {wines && wines.map((wine, i) =>(
           <li key={i}>
