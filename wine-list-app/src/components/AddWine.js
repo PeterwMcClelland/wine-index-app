@@ -50,7 +50,7 @@ import { useNavigate } from 'react-router-dom';
          console.log(inputs);
          sendRequest().then(() => history('/wines'))
      };
-     
+
   return <form className='addwine' onSubmit={handleSubmit}>
 
       <Box 

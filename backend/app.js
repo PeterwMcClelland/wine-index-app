@@ -2,8 +2,12 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const router = require("./routes/wine-routes");
+const dotenv = require('dotenv');
+
 
 const app = express();
+
+require('dotenv').config;
 
 // middlewares
 app.use(express.json());
@@ -18,3 +22,4 @@ mongoose.connect(
     }).catch((err)=>console.log(err));
 
 // password: torCtrvegObXULYi
+
