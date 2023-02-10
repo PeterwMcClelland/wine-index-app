@@ -2,12 +2,14 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const router = require("./routes/wine-routes");
-const dotenv = require('dotenv');
+const path = require('path');
+
+require("dotenv").config({ path: path.resolve(__dirname, '../.env') });
 
 
 const app = express();
 
-require('dotenv').config;
+
 
 // middlewares
 app.use(express.json());
@@ -15,7 +17,7 @@ app.use(cors());
 app.use("/wines", router);// localhost:3000/wines
 
 mongoose.connect(
-    "mongodb+srv://admin:torCtrvegObXULYi@cluster0.dwnwkew.mongodb.net/wine-index?retryWrites=true&w=majority"
+    process.env.DB_URI
     ).then(() => console.log("DataBase Connected!"))
     .then(() => {
         app.listen(3000);

@@ -18,14 +18,7 @@ const fetchHandler = async() => {
   console.log(wines);
   
   return <div className='background'>
-      <div class="ui-widget">
-            <label for="recipe">Recipe:</label><br />
-            <input id="recipe"></input>
-            <ul id="ingredients"></ul>
-        </div>
-        <script>
-            $(document).ready(function () {});
-        </script>
+      
       <ul>
           {wines && wines.map((wine, i) =>(
           <li key={i}>
