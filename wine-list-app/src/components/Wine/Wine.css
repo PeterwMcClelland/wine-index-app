@@ -19,6 +19,22 @@ header {
     z-index: 9999;
 }
 
+.home-header {
+    text-align: -webkit-center;
+    padding-top: 50px;
+}
+
+.home-h1 {
+    margin: 0px;
+    font-size: 100px;
+    border-radius: 5px;
+    width: -moz-fit-content;
+    
+    color: floralwhite;
+    padding: 10px;
+    font-size: xxx-large;
+}
+
 /* Wine List */
 
 ul {

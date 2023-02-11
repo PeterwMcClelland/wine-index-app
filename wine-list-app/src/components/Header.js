@@ -11,8 +11,10 @@ export const Header = () => {
             
         <Toolbar>
             <Typography>
-                <WineBarIcon />
+                <WineBarIcon fontSize="large" />
+                
             </Typography>
+            <h1 className='home-h1'>Wine Index</h1>
             <Tabs 
             sx={{ml:'auto'}}
             textColor='inherit' 
@@ -20,9 +22,10 @@ export const Header = () => {
             value={value} 
             onChange={( e, val) => setValue(val)}
             >
-                <Tab LinkComponent={NavLink} to="/add" label='Add Wine'/>
+                    <Tab LinkComponent={NavLink} to="/" label='Home'/>
                     <Tab LinkComponent={NavLink} to="/wines" label='All Wines'/>
-                    <Tab LinkComponent={NavLink} to="/about" label='About Us'/>
+                    <Tab LinkComponent={NavLink} to="/add" label='Add Wine'/>
+                    {/* <Tab LinkComponent={NavLink} to="/about" label='About Us'/> */}
             </Tabs>
         </Toolbar>
         </AppBar>

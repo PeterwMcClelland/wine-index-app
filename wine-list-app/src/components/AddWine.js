@@ -154,6 +154,7 @@ import { useNavigate } from 'react-router-dom';
           fullWidth
           variant="outlined"
           name="image"
+          placeholder="Copy Paste Web URL path..."
         />
       <Button variant='contained' type='submit' >
           Add Wine
