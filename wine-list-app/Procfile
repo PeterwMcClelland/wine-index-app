@@ -1,0 +1,1 @@
+web:node ./wine-list-app/src/app.js
